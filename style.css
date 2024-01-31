@@ -10,3 +10,12 @@
   width: 50%;
   padding: 15px;
 }
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+  text-decoration: line-through;
+}
