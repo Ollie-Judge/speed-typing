@@ -17,5 +17,5 @@
 
 .incorrect {
   color: red;
-  text-decoration: line-through;
+  text-decoration: underline;
 }

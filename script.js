@@ -2,8 +2,20 @@ const quoteToCopy = document.getElementById("quoteToCopy");
 const quoteInput = document.getElementById("quoteInput");
 
 quoteInput.addEventListener("input", (e) => {
-  console.log(e.target.value);
-  //characterSpan.classList.add("incorrect");
+  const arrayQuoteToCopy = quoteToCopy.querySelectorAll("span");
+  const userInputQuote = e.target.value.split("");
+  console.log("quote: ", arrayQuoteToCopy);
+  console.log("user: ", userInputQuote);
+  arrayQuoteToCopy.forEach((characterSpan, i) => {
+    const character = userInputQuote[i];
+    if (character === characterSpan.innerText) {
+      characterSpan.classList.add("correct");
+      characterSpan.classList.remove("incorrect");
+    } else {
+      characterSpan.classList.add("incorrect");
+      characterSpan.classList.remove("correct");
+    }
+  });
 });
 
 const randomQuoteApiUrl = "http://api.quotable.io/random";
