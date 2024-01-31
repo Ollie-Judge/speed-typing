@@ -3,3 +3,10 @@
   margin: 25px auto;
   text-align: center;
 }
+
+#quoteInput {
+  resize: none;
+  height: 200px;
+  width: 50%;
+  padding: 15px;
+}
